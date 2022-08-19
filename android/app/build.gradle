@@ -237,9 +237,7 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
         uat{
-            matchingFallbacks = ['release']
             signingConfig signingConfigs.uat
-            minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt") , "proguard-rules.pro"
         }
     }
