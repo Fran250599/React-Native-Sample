@@ -138,6 +138,7 @@ android {
 
 
     defaultConfig {
+        compileSdkVersion 31
         applicationId "com.reactivestreams"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
