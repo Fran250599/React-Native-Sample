@@ -128,12 +128,17 @@ def reactNativeArchitectures() {
     return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
 }
 
+task wrapper(type: Wrapper){
+    gradleVersion = '7.2'
+}
+
 android {
     ndkVersion rootProject.ext.ndkVersion
     compileSdk compileSdkVersion
 
 
     defaultConfig {
+        compileSdkVersion 31
         applicationId "com.reactivestreams"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -234,10 +239,7 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
-        uat{
-            initWith debug
-            signingConfig signingConfigs.debug
-        }
+        
     }
 
     // applicationVariants are e.g. debug, release
