@@ -243,21 +243,6 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
-
-        flavorDimensions "test"
-        productFlavors {
-            myApp {
-                dimension "test"
-            }
-            myAppDev {
-                dimension "test"
-                applicationIdSuffix ".dev"
-            }
-            myAppTest {
-                dimension "test"
-                applicationIdSuffix ".test"
-            }
-        }
         uat {
             applicationIdSuffix ".uat"
 
