@@ -258,7 +258,7 @@ android {
                 applicationIdSuffix ".test"
             }
         }
-        uat{
+        uat {
             applicationIdSuffix ".uat"
 
         }
