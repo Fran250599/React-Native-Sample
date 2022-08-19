@@ -232,16 +232,10 @@ android {
     }
     buildTypes {
 
-        debug{
+        debug {
             applicationIdSuffix ".debug"
             debuggable true
         }
-
-        uat{
-            applicationIdSuffix ".uat"
-            
-        }
-
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://reactnative.dev/docs/signed-apk-android.
@@ -264,7 +258,10 @@ android {
                 applicationIdSuffix ".test"
             }
         }
+        uat{
+            applicationIdSuffix ".uat"
 
+        }
     }
 
     // applicationVariants are e.g. debug, release
